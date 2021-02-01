@@ -42,12 +42,12 @@ userdocker pull malteos/nlp-starter:latest
 userdocker ps --gpu-free
 
 # start container with shell
-sudo userdocker run -it --rm malteos/nlp-starter bash
+sudo userdocker --executor=nvidia-docker run -it --rm malteos/nlp-starter bash
 
-# start container with Jupyter
-sudo userdocker run -it --rm -p 8888:8888 malteos/nlp-starter jupyter notebook
+# start container with Jupyter (change ports if needed)
+sudo userdocker --executor=nvidia-docker run -it --rm -p 8881:8881 malteos/nlp-starter jupyter notebook --ip 0.0.0.0 --port 8881 --no-browser
 
 # run CLI script in container
-sudo userdocker run --rm malteos/nlp-starter cli.py dummy "hello world"
+sudo userdocker --executor=nvidia-docker run --rm malteos/nlp-starter python cli.py dummy "hello world"
 ```
 
