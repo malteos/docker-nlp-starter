@@ -1,0 +1,37 @@
+# general
+pandas
+jupyter
+numpy
+tqdm
+seaborn
+matplotlib
+pyyaml
+scikit-learn
+fire
+
+# data accusition & preprocessing
+requests
+smart-open
+
+# ml
+torch
+sklearn
+
+# nlp
+gensim
+spacy
+fasttext==0.9.2
+transformers==4.2.1
+
+# similarity
+annoy
+fuzzywuzzy
+python-levenshtein
+
+datasets==1.0.2
+
+# experiments
+tensorboard
+Pillow
+tabulate==0.8.7
+wandb==0.10.4
